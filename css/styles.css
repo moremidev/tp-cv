@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(244, 245, 247);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*--------------------------------------------------------------
+# Custom Style
+--------------------------------------------------------------*/
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    box-shadow: 2px 6px 8px 0 rgb(22 22 26 / 18%);
+}
+
+.container .left_side {
+    position: relative;
+    background-color:#ccb7b2 ;
+    padding: 40px;
+}
+.container .main {
+    position: relative;
+    background: #F1F1F3;
+    padding: 40px;
+}
+.profile{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profile_img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile_img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.profile h2{
+    color: white;
+    font-size:1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profile h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contact{
+    padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contact ul{
+    position: relative;
+}
+.contact ul li {
+    position: relative;
+    margin: 10px 0;
+}
+
+.contact ul li .icon {
+    font-weight: 300;
+    font-size: 18px;
+    display: inline-block;
+    background-color: #ff9f6b;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.contact ul li .text {
+    font-family: "Poppins", sans-serif;
+    color: #f6f4f4;
+}
+.contact ul li .icon:hover{
+    background: #fd5162;
+}
+
+.contact.education li {
+    margin-bottom: 15px;
+}
+
+.contact.education h5{
+    color: #E5E7E7;
+    font-weight: 500;
+}
+.contact.contact.education h4:nth-child(1){
+    color: #fff;
+    font-weight: 500;
+}
+.contact.contact.education h4{
+    color: #fff;
+    font-weight: 300;
+}
+.val{
+    float: right;
+    font-style: normal;
+}
+.contact.language .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #b3a4a0;
+    display: block;
+    margin-top: 5px;
+}
+.contact.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #F1F1F3;
+}
+
+.about{
+    position: relative;
+    margin-bottom: 50px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.about h2 {
+    color: #4a4f52;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.about h2:after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #ff9f6b;
+	left: 0;
+}
+p{
+    color: #333;
+}
+
+.wrapped{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.wrapped .year_company{
+    min-width: 150px;
+}
+.wrapped .year_company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.wrapped .text h4{
+    text-transform: uppercase;
+    color: #2A2E2D;
+    font-size: 16px;
+}
+.wrapped .text p{
+    width: 80%;
+    margin-bottom: 5px;
+}
+.skills .wrapped{
+    position: relative;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skill_box {
+    height: 60px;
+    display: block;
+}
+.skill_box h4{
+    color: #848c90;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.skill_box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgb(80, 77, 80);
+}
+.skill_box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #9e9e9c;
+}
+
+/* Interest */
+.interest h2{
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.interest h2::after{
+    content: "";
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #ff9f6b;
+	left: 0;
+}
+
+.interest .interest_list{
+    position: relative;
+    display: grid;
+    /* grid-template-columns: repeat(2,1fr); */
+}
+.interest .interest_list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    color: #333;
+    font-weight: 500;
+}
+.interest .interest_list li .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color:#2A2E2D;
+    border: 1px solid #9e9e9c;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.interest .interest_list li span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+
+@media(max-width:1200px){
+    .container{
+        margin: 10px;
+        grid-template-columns: 1fr, 1.5fr;
+    }
+    .interest_list {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:600px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .about .wrapped{
+        flex-direction: column;
+    }
+    .about .wrapped .year_company{
+        margin-bottom: 5px;
+    }
+    .skill_box{
+        grid-template-columns: 1fr;
+    }
+    .interest_list {
+        grid-template-columns: 1fr;
+    }
+
+}
