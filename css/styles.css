@@ -8,11 +8,11 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
 body {
-    font-family: "Open Sans", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: "Poppins", sans-serif;
     min-height: 100vh;
     background: rgb(244, 245, 247);
 }
@@ -37,23 +37,94 @@ ul {
 /*--------------------------------------------------------------
 # Custom Style
 --------------------------------------------------------------*/
-.container {
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: #fcfcfc;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    color: #2A2E2D;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #2A2E2D;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #848c90;
+    border-bottom: 2px solid #333;
+    transition: ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    font-weight: 600;
+}
+.nav-link{
+    cursor: pointer;
+}
+.burger-menu{
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    z-index: 9998;
+    border: 0;
+    font-size: 24px;
+    transition: all 0.4s;
+    border-radius: 50%;
+    color: #333;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+.burger-menu:hover{
+    background-color: #aca5a5;
+    border-radius: 50px;
+    padding: 8px 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+/* MAIN */
+.container-page {
     position: relative;
     width: 100%;
     max-width: 1000px;
     min-height: 1000px;
-    margin: 50px;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     box-shadow: 2px 6px 8px 0 rgb(22 22 26 / 18%);
 }
 
-.container .left_side {
+.container-page .left_side {
     position: relative;
     background-color:#ccb7b2 ;
     padding: 40px;
 }
-.container .main {
+.container-page .main {
     position: relative;
     background: #F1F1F3;
     padding: 40px;
@@ -275,7 +346,7 @@ p{
 .interest .interest_list{
     position: relative;
     display: grid;
-    /* grid-template-columns: repeat(2,1fr); */
+    grid-template-columns: repeat(2,1fr);
 }
 .interest .interest_list li {
     display: flex;
@@ -306,19 +377,77 @@ p{
 }
 
 
-@media(max-width:2560px){
-    .container{
-        margin: 10px;
-        grid-template-columns: 1fr, 1.5fr;
+@media(max-width:1200px) {
+    nav {
+        padding: 1.5rem 1rem;
+        width: 100%;
     }
-    .interest .interest_list {
+
+    nav ul {
+        position: fixed;
+        background-color: #fcfcfc;
+        flex-direction: column;
+        top: 50px;
+        left: 10%;
+        width: 90%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul li {
+        margin: 8px;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+    }
+    .burger-menu {
+        display: block;
+        top: 5px;
+    }
+    .container-page{
+        margin: 10px auto;
         grid-template-columns: repeat(2,1fr);
     }
+    .interest_list {
+        grid-template-columns: repeat(2,1fr);
+    }
+
 }
 
-@media (max-width:600px){
-    .container{
+@media screen and (max-width: 600px) {
+    .container-page{
+        margin: 5px auto;
         grid-template-columns: 1fr;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    .burger-menu:hover{
+        background-color: #676767;
+        border-radius: 50px;
+        padding: 8px 0;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s;
+        cursor: pointer;
+        display: block;
+    }
+    nav ul {
+        display: flex;
+        gap: 1.5rem;
+        width: 90%;
+        border-radius: 0px 0px 16px 44px / 0px 0px 0px 41px;
+    }
+    .profile_img {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
     }
     .about .wrapped{
         flex-direction: column;
@@ -326,11 +455,4 @@ p{
     .about .wrapped .year_company{
         margin-bottom: 5px;
     }
-    .skill_box{
-        grid-template-columns: 1fr;
-    }
-    .interest .interest_list {
-        grid-template-columns: 1fr;
-    }
-
 }

@@ -24,8 +24,24 @@
     <title>CV</title>
 </head>
 <body>
-    <div class="container">
-        <aside class="left_side">
+    <!-- Navbar section -->
+
+    <nav>
+        <h1></h1>
+        <ul class="navigation">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a class="nav-link" href="#" id="btn-user"><i class="fa-sharp fa-solid fa-arrows-rotate"></i>User</a></li>
+            <li><a class="nav-link btn" type="button" id="btn-cv"><i class="fa-sharp fa-solid fa-download"></i>cv</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+    </nav>
+    <div class="container-page" id="about">
+        <aside class="left_side" >
             <div class="profile">
                 <div class="profile_img">
                     <img src="./img/avatar.jpg" id="avatar" alt="profile image">
@@ -93,16 +109,16 @@
             </div>
         </aside>
         <div class="main">
-            <div class="about">
+            <div class="about" id="experience">
                 <h2 class="about_title">Profile</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laborum ipsa velit consequatur
                     incidunt harum, tempora odit nam! Maxime distinctio nemo<br><br>Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Fuga aperiam officia sunt totam corrupti odit eligendi, qui repellat
                     laborum. Rem debitis pariatur ab provident deserunt enim eaque facere quaerat cupiditate.</p>
             </div>
-            <div class="about">
+            <div class="about" >
                 <h2 class="about_title">Experience</h2>
-                <div class="wrapped">
+                <div class="wrapped" >
                     <div class="text">
                         <h4>Senior Fronted Developer</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -133,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about skills">
+            <div class="about skills" id="skills">
                 <h2 class="skills_title">Professional Skills</h2>
                 <div class="skill_box">
                     <h4>HTML <i class="val">95%</i></h4>
@@ -177,6 +193,6 @@
             </div>
         </div>
     </div>
-    <script src="./"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
