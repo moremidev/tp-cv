@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="img/site.webmanifest">
 
     <meta property="og:title" content="Curriculum Vitae">
     <meta property="og:type" content="website">
@@ -25,16 +25,16 @@
 </head>
 <body>
     <!-- Navbar section -->
-
     <nav>
         <h1></h1>
         <ul class="navigation">
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#experience" class="nav-link">Experience</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a class="nav-link" href="#" id="btn-user"><i class="fa-sharp fa-solid fa-arrows-rotate"></i>User</a></li>
-            <li><a class="nav-link btn" type="button" id="btn-cv"><i class="fa-sharp fa-solid fa-download"></i>cv</a></li>
+            <li><a class="nav-link " href="#" id="btn-user" type="button" onclick="getUser()"><i class="fa-sharp fa-solid fa-arrows-rotate nav-icon"></i>User</a></li>
+            <li><a class="nav-link" type="button" id="btn-cv" onclick="window.print()"><i class="fa-sharp fa-solid fa-download nav-icon"></i>cv</a></li>
         </ul>
+
         <button class="burger-menu" id="burger-menu">
             <i class="fa-solid fa-bars"></i>
             <ion-icon class="bars" name="menu-outline"></ion-icon>
@@ -46,7 +46,9 @@
                 <div class="profile_img">
                     <img src="./img/avatar.jpg" id="avatar" alt="profile image">
                 </div>
-                <h2 id="name">Nicoline Andersen<br><span>Web Developer</span></h2>
+                <h2 id="name">Nicoline Andersen</h2>
+                <span>Web Developer</span>
+
             </div>
             <div class="contact">
                 <h3 class="title">Contact Info</h3>
@@ -69,7 +71,7 @@
                     </li>
                     <li>
                         <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-                        <span class="text">direction adress</span>
+                        <span class="text" id="location">direction adress</span>
                     </li>
                 </ul>
             </div>
@@ -109,14 +111,14 @@
             </div>
         </aside>
         <div class="main">
-            <div class="about" id="experience">
+            <div class="about">
                 <h2 class="about_title">Profile</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laborum ipsa velit consequatur
                     incidunt harum, tempora odit nam! Maxime distinctio nemo<br><br>Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Fuga aperiam officia sunt totam corrupti odit eligendi, qui repellat
                     laborum. Rem debitis pariatur ab provident deserunt enim eaque facere quaerat cupiditate.</p>
             </div>
-            <div class="about" >
+            <div class="about" id="experience" >
                 <h2 class="about_title">Experience</h2>
                 <div class="wrapped" >
                     <div class="text">
